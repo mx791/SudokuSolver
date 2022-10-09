@@ -9,7 +9,7 @@ int SIZE_2 = SIZE*SIZE;
 int FULL_SIZE = SIZE_2*SIZE_2;
 
 int* createWithSize(int size) {
-    int* arr = (int*)malloc(sizeof(int)*size);
+    int* arr = new int[size];
     for (int i=0; i<size; i++) {
         arr[i] = 0;
     }
@@ -138,7 +138,7 @@ int* loadGrid() {
     SIZE = sqrt(i);
     SIZE_2 = SIZE*SIZE;
     FULL_SIZE = SIZE_2*SIZE_2;
-    int* grid = (int*)malloc(sizeof(int)*data.size());
+    int* grid = new int[data.size()];
     for (int id=0; id<data.size(); id++) {
         grid[id] = data[id];
     }
